@@ -14,8 +14,8 @@ var black = const Color(0xFF000000);
 //TextStyles
 TextStyle heading1 = GoogleFonts.poppins(fontWeight: FontWeight.w700,color: heading,fontSize: 32);
 TextStyle heading2 = GoogleFonts.poppins(fontWeight: FontWeight.w600,color: heading,fontSize: 18);
-TextStyle heading3 = GoogleFonts.poppins(fontWeight: FontWeight.w600,color: heading,fontSize: 16);
-TextStyle heading4 = GoogleFonts.poppins(fontWeight: FontWeight.w600,color: heading,fontSize: 14);
+TextStyle heading3 = GoogleFonts.poppins(fontWeight: FontWeight.w600,color: white,fontSize: 24);
+TextStyle heading4 = GoogleFonts.poppins(fontWeight: FontWeight.w700,color: white,fontSize: 14);
 
 TextStyle pBold =  GoogleFonts.poppins(
     fontSize: 18,fontWeight: FontWeight.w700,color: white);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:money_manager/controller/db_helper.dart';
+import 'package:money_manager/pages/home.dart';
 import 'package:money_manager/utils/style.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -169,10 +170,11 @@ class _AddTransactionState extends State<AddTransaction> {
               ElevatedButton(
                 style: ButtonStyle(
                 ),
-                  onPressed: (){
+                  onPressed: () async{
                     if(amount!=null && note.isNotEmpty){
                       DbHelper dbHelper =DbHelper();
-                      dbHelper.addData(amount!, date, note, type);
+                      await dbHelper.addData(amount!, date, note, type);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                       print('value added');
                     }else{
                       print('value not provided');
