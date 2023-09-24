@@ -8,7 +8,12 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>AddTransaction()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context)=>AddTransaction()
+            )
+        );
       },
       child: Icon(Icons.add),
       shape: RoundedRectangleBorder(

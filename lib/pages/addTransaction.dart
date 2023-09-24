@@ -174,7 +174,7 @@ class _AddTransactionState extends State<AddTransaction> {
                     if(amount!=null && note.isNotEmpty){
                       DbHelper dbHelper =DbHelper();
                       await dbHelper.addData(amount!, date, note, type);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));;
                       print('value added');
                     }else{
                       print('value not provided');
