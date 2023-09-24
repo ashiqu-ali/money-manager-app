@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:money_manager/components/floatingButton.dart';
-import 'package:money_manager/components/recenthEADING.dart';
+import 'package:money_manager/components/Heading.dart';
 import 'package:money_manager/components/transaction.dart';
 import 'package:money_manager/controller/db_helper.dart';
 import 'package:money_manager/components/totalBalance.dart';
 import 'package:money_manager/utils/style.dart';
+
+import '../components/Chart.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -73,7 +75,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     TotalBalance(totalBalance: totalBalance, totalIncome: totalIncome, totalExpense: totalExpense),
-                    const RecentHeading(),
+                    Heading(headng: 'Expenses'),
+                    Chart(data: snapshot.data!),
+                    Heading(headng: 'Recent Transaction'),
                     Transaction(length: snapshot.data!.length,data: snapshot.data!)
 
                   ],
