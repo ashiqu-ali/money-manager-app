@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:money_manager/components/floatingButton.dart';
+import 'package:money_manager/components/recenthEADING.dart';
+import 'package:money_manager/components/transaction.dart';
 import 'package:money_manager/controller/db_helper.dart';
 import 'package:money_manager/components/totalBalance.dart';
 import 'package:money_manager/utils/style.dart';
@@ -22,7 +24,6 @@ class _HomePageState extends State<HomePage> {
     totalIncome = 0;
     totalExpense = 0;
     entireData.forEach((key, value) {
-      print(value);
       if (value['type'] == 'Income') {
         totalBalance += (value['amount'] as int);
         totalIncome += (value['amount'] as int);
@@ -71,7 +72,10 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    TotalBalance(totalBalance: totalBalance, totalIncome: totalIncome, totalExpense: totalExpense)
+                    TotalBalance(totalBalance: totalBalance, totalIncome: totalIncome, totalExpense: totalExpense),
+                    const RecentHeading(),
+                    Transaction(length: snapshot.data!.length,data: snapshot.data!)
+
                   ],
                 );
               } else {

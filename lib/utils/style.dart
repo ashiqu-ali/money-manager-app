@@ -21,7 +21,7 @@ TextStyle pBold =  GoogleFonts.poppins(
     fontSize: 18,fontWeight: FontWeight.w700,color: white);
 TextStyle p1 = GoogleFonts.poppins(color: text, fontSize: 24, fontWeight: FontWeight.w400);
 TextStyle p2 = GoogleFonts.poppins(color: heading, fontSize: 24,fontWeight: FontWeight.w500);
-TextStyle p3 = GoogleFonts.poppins(color: text, fontSize: 10,fontWeight: FontWeight.w400);
+TextStyle p3 = GoogleFonts.poppins(color: heading, fontSize: 18,fontWeight: FontWeight.w500);
 TextStyle p4 = GoogleFonts.poppins(color: Colors.white, fontSize: 14,fontWeight: FontWeight.w500);
 
 TextStyle pPrice = GoogleFonts.poppins(
