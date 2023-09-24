@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:money_manager/controller/db_helper.dart';
 import 'package:money_manager/utils/style.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -169,10 +170,13 @@ class _AddTransactionState extends State<AddTransaction> {
                 style: ButtonStyle(
                 ),
                   onPressed: (){
-                    print(amount);
-                    print(note);
-                    print(date);
-                    print(type);
+                    if(amount!=null && note.isNotEmpty){
+                      DbHelper dbHelper =DbHelper();
+                      dbHelper.addData(amount!, date, note, type);
+                      print('value added');
+                    }else{
+                      print('value not provided');
+                    }
                   },
                   child: Text('Add')
               )
