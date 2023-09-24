@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:money_manager/utils/style.dart';
@@ -30,8 +29,25 @@ class Chart extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
+    getPlotPoints(data!);
+    return dataSet.length < 2 ?
+        Container(
+          height: 130,
+          decoration: BoxDecoration(
+              color: white,
+              borderRadius: BorderRadius.circular(8.0),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(0.4),
+                    spreadRadius: 5,
+                    blurRadius: 6,
+                    offset: Offset(0,4)
+                )
+              ]
+          ),
+          child: Center(child: Text('Not Enough data to render!',style: heading2,)),
+        ) : Container(
+      padding: const EdgeInsets.symmetric(
         vertical: 40.0,
         horizontal: 8.0
       ),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:money_manager/pages/home.dart';
-import 'package:money_manager/utils/style.dart';
 
 void main() async{
   await Hive.initFlutter();

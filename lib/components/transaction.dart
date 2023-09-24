@@ -12,7 +12,7 @@ class Transaction extends StatelessWidget {
     required this.length,
     required this.data,
     super.key
-});
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class Transaction extends StatelessWidget {
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: length,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context,index){
           Map dataAtIndex = data![index];
           if(dataAtIndex['type']=='Income'){

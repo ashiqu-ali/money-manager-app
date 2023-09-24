@@ -25,7 +25,7 @@ class TotalExpense extends StatelessWidget {
             color: Colors.red[700],
           ),
         ),
-        SizedBox(width: 8.0),
+        SizedBox(width: xsmall),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

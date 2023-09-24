@@ -25,7 +25,7 @@ class TotalIncome extends StatelessWidget {
             color: Colors.green[700],
           ),
         ),
-        SizedBox(width: 8.0),
+        SizedBox(width: xsmall),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

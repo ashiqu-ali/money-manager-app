@@ -23,7 +23,7 @@ class TotalBalance extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      margin: EdgeInsets.all(12.0),
+      margin: EdgeInsets.all(small),
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

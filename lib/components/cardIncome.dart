@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:money_manager/utils/style.dart';
@@ -37,7 +36,7 @@ class CardIncome extends StatelessWidget {
       child: Container(
         height: 100,
         decoration: BoxDecoration(
-          color: Color(0xffced4eb),
+          color: const Color(0xffced4eb),
           borderRadius: BorderRadius.circular(xsmall),
         ),
         child: Column(

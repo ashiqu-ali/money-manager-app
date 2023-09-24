@@ -39,7 +39,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      // Disable the back button press event for this page
       onWillPop: () async => false,
       child: Scaffold(
         backgroundColor: background,
@@ -49,12 +48,9 @@ class _HomePageState extends State<HomePage> {
             future: dbhelper.fetch(),
             builder: (context, snapshot) {
               if (snapshot.hasError) {
-                return Center(child: Text('Unexpected Error!'));
+                return const Center(child: Text('Unexpected Error!'));
               }
               if (snapshot.hasData) {
-                if (snapshot.data!.isEmpty) {
-                  return Center(child: Text('snapshot Empty!'));
-                }
                 getTotalBalance(snapshot.data!);
                 return ListView(
                   children: [
@@ -83,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 );
               } else {
-                return Center(child: Text('Unexpected Error!(else)'));
+                return const Center(child: Text('Unexpected Error!(else)'));
               }
             },
           ),

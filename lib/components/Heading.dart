@@ -4,7 +4,7 @@ import 'package:money_manager/utils/style.dart';
 
 class Heading extends StatelessWidget {
   final String headng;
-  Heading({
+  const Heading({
     required this.headng,
     super.key
 });

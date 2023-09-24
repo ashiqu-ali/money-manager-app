@@ -3,8 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:money_manager/controller/db_helper.dart';
 import 'package:money_manager/pages/home.dart';
 import 'package:money_manager/utils/style.dart';
-import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
 
 
 class AddTransaction extends StatefulWidget {
@@ -115,7 +113,6 @@ class _AddTransactionState extends State<AddTransaction> {
                 onChanged: (val){
                   try{
                     amount=int.parse(val);
-                    print(amount);
                   }catch(e){
                     print(e);
                   }
@@ -180,7 +177,7 @@ class _AddTransactionState extends State<AddTransaction> {
                       print('value not provided');
                     }
                   },
-                  child: Text('Add')
+                  child: Text('Add'),
               )
 
             ],
